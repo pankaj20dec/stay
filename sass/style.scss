@@ -1,0 +1,458 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800';
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+@import "variables/variables";
+
+body{
+	font-family: $body-font;
+	font-size: $body-fontsize;
+	font-weight: $font-light;
+	font-style: $font-normal;
+	color: $black;
+	line-height: 2;
+	letter-spacing: 1px;
+}
+a{
+	color: $black;
+	text-decoration: none;
+}
+a:hover,a:visited,a:link{
+	text-decoration: none;
+	color: $black;
+}
+strong{
+	font-family: $body-font;
+	font-weight: $font-semi-bold;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+h1{
+	font-family: $montserrat;
+	font-size: 44px;
+	font-weight:  $font-semi-bold;
+	letter-spacing: 2px;
+	margin: 0;
+	position: relative;
+	z-index: 1;
+	line-height: 65px;
+}
+h2{
+	@extend h1;
+}
+.section-title{
+	@extend h1;
+}
+h3{
+	font-family: $montserrat;
+	font-size: 40px;
+	font-weight: $font-normal;
+	margin:  40px 0 40px 0;
+	letter-spacing: 3px;
+	border-bottom: 1px solid;
+	padding: 0 0 45px;
+}
+.title{
+	@extend h3;
+	border-bottom: 0;
+	padding: 0;
+}
+h4{	
+	font-family: $montserrat;
+	font-size: 22px;
+	font-weight: $font-normal;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+h5{
+	font-family: $montserrat;
+	font-size: 16px;
+	font-weight: $font-semi-bold;
+	text-transform: uppercase;
+	margin: 0 0 15px 0;
+	line-height: 1;
+}
+h6{
+	font-size: 14px;
+	font-family: $montserrat;
+	font-weight: $font-bold;
+	text-transform: uppercase;
+	line-height: 2;
+	letter-spacing: 2px;
+	margin: 0;
+}
+.common-space{
+	padding: 80px 0;
+}
+.second-space{
+	padding: 140px 0;
+}
+img{
+	max-width: 100%;
+}
+.btn-default{
+	background-color: transparent;
+	font-family: $montserrat;
+	font-style: $font-normal;
+	font-weight: $font-semi-bold;
+	color: $black;
+	border: none;
+    border-radius: 0;
+    letter-spacing: 1px;
+	padding: 8px 0;
+	font-size: $primary-fontsize;
+	&:hover{
+		background-color: transparent;	
+		border: none;
+		color: $black;
+	}
+	&:focus{
+		background-color: transparent;
+	}
+}
+.btn{
+	&:active{
+		box-shadow: none;
+		background-color: transparent;
+	}	
+}
+.btn-default:active:hover, .btn-default:active:focus, .btn-default.focus:active{
+	background-color: transparent;
+	color: $black;
+}
+.link-button{
+	@extend .btn-default;
+	margin: 30px 0;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	text-transform: uppercase;
+	position: relative;
+	text-decoration: none;
+	padding-right: 30px; 
+		&:after{
+			content: "\f105";
+			font-family: fontawesome;
+			font-size: 23px;
+			font-weight: 400;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+
+.form-control{
+	font-family: $body-font;
+	font-style: $font-normal;
+	color: $black;
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	background: #fff;
+	width: 220px !important;
+	height: 32px;
+	letter-spacing: 2px;
+		&::-moz-placeholder{
+		color: $black;
+		
+		}
+		&:-webkit-placeholder{
+			color: $black;
+		}
+		&:-ms-placeholder{
+			color: $black;
+		}
+		&:focus{
+			box-shadow: none;
+		}
+	}
+
+.flex-container{
+	display: -webkit-flexbox;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+.container{
+	max-width: 1190px;
+	margin: 0 auto;
+	padding: 0 100px;
+	position: relative;
+	background: $white;
+}
+.home{
+	.container{
+	@extend .container;
+	background: transparent;
+	}
+}
+.second-container{
+	@extend .container;
+	max-width: 1230px;
+	background: transparent;
+	padding: 0 15px;
+}
+.page-content{
+	padding-top: 60px;
+}
+.col-centered{
+	float: none;
+	margin: 0 auto;
+}
+.left-padding{
+	padding-left: 0;
+}
+.right-padding{
+	padding-right: 0;
+}
+.no-pad{
+	padding: 0;
+}
+/************  Header  **********/
+	.navbar-default {
+		background-color: transparent;
+		border-color: transparent;
+	}
+	.navbar{
+		border-radius: 0;
+		margin-bottom: 0;
+	}
+	header{
+		line-height: 140px;
+		position: relative;
+			#header{	
+				max-width: 990px;
+				margin: 0 auto;	
+				padding: 0 15px;
+				position: relative;
+					.navigation{
+						ul{
+							li{
+								display: inline-block;
+								margin:10px 45px 0 0;
+								a{
+									text-transform: uppercase;
+									font-size: $secondry-fontsize;
+									font-weight: $font-semi-bold;
+									&:hover{
+										border-top: 2px solid;
+										padding-top: 5px;
+									}
+								}
+							}
+						}	
+					}
+			}
+		.top-header{
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			line-height: 1;
+			.social-icons{
+				ul{
+					li{
+						display: inline-block;
+						margin-right: 15px;
+						&:last-child{
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+		.logo{
+			position: absolute;
+			top: 50px;
+			left: -160px;
+			line-height: 1;
+		}
+	}
+.main-container{
+	.content{
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		-webkit-column-gap: 100px;
+		-moz-column-gap: 100px;
+		column-gap: 100px;
+		padding: 75px 0 25px;
+	}
+	.home-villas{
+		background: $cream;
+		.row{
+			margin: 0;
+		}
+		@at-root .content-box{
+			background: $white;
+			min-height: 605px;
+			text-align: center;
+			padding: 0 85px;
+			.details{
+				padding: 0 40px;
+			}
+		}
+	}
+	.content-area{
+		text-align: center;
+		.link {
+			background: $white;
+			display: block;
+			font-size: 20px;
+			font-weight: $font-bold;
+			margin: -75px 25px 30px;
+			padding: 30px;
+			position: relative;
+		}
+	}
+	.latest-blog{
+		background:$cream;
+		.content-box{
+			min-height: 525px;
+			background: transparent;
+			h3{
+				margin-top: 35px;
+			}
+		}
+	}
+	.home-contact{
+		.navbar-form{
+			margin-top: 60px;
+		
+		.form-group {
+			float: left;
+			padding-right: 15px;
+			width: 55%;
+			.form-control{
+				background: #f8f8f8;
+				margin-bottom: 15px;
+				height: 50px;
+				width: 100% !important;
+				padding: 6px 20px;
+				font-weight: $font-semi-bold;
+			}
+		}
+		.message {
+			float: left;
+			width: 45%;
+			.form-control{
+				background: #f8f8f8;
+				width: 100% !important;
+				border: 0;
+				padding: 12px 20px;
+				font-weight: $font-semi-bold;
+				color: $black;
+			}
+		}
+	}
+ }	
+}
+/*************** Footer *************/
+#footer{
+	.follow-us{
+		h4{
+			margin-bottom: 30px;
+		}
+		h5{
+			margin-bottom: 50px;
+		}
+		text-align: center;
+		.insta-feed{
+			font-size: 20px;
+			position: relative;
+			@at-root .next {
+				margin-top: -20px;
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				color: $white;
+				cursor: pointer;
+				z-index: 99;
+			}
+			@at-root .prev {
+				margin-top: -20px;
+				position: absolute;
+				top: 50%;
+				left: 10px;
+				color: $white;
+				cursor: pointer;
+				z-index: 99;
+			}
+		}
+	}
+	.subscribe-container{
+		background: #f8f8f8;
+		min-height: 260px;
+		.subscribe-bg{
+			background-size: cover !important;
+			min-height: 260px;
+		}
+		.subscribe{
+			min-height: 260px;
+			display: flex;
+			align-items: center;
+			.subscribe-form{
+				width: 655px;
+				h5{
+					display: inline-block;
+					font-size: 25px;
+					text-transform: lowercase;
+					padding: 0 20px 0 5px;
+				}
+				.navbar-form{
+					display: inline-block;
+					.form-group{
+						display: block;
+						input{
+							&:first-child{
+								margin-right: 8px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer-menus{
+		text-align: center;
+		line-height: 55px;
+		ul{
+			li{
+				margin-right: 60px;
+				display: inline-block;
+				a{
+					font-size: $secondry-fontsize;
+					text-transform: uppercase;
+					font-weight: $font-semi-bold;
+					&:hover{
+							border-top: 2px solid;
+							padding-top: 5px;
+						}
+				}
+				&:last-child{
+					&:after{
+						content: "";
+					}
+				}
+				&:after{
+						content: "-";
+						position: absolute;
+						padding-left: 30px;
+					}
+			}
+		}
+	}
+	.credit{
+		text-align: center;
+		line-height: 140px;
+		background: #efeff0;
+		color: $black;
+	}
+}	
+	
