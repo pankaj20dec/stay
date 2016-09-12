@@ -189,9 +189,9 @@
 	div.light_square .pp_expand:hover { background: url(../images/prettyPhoto/light_square/sprite.png) -31px -47px no-repeat; cursor: pointer; } /* Expand button hover */
 	div.light_square .pp_contract { background: url(../images/prettyPhoto/light_square/sprite.png) 0 -26px no-repeat; cursor: pointer; } /* Contract button */
 	div.light_square .pp_contract:hover { background: url(../images/prettyPhoto/light_square/sprite.png) 0 -47px no-repeat; cursor: pointer; } /* Contract button hover */
-	div.light_square .pp_close { width: 75px; height: 22px; background: url(../images/prettyPhoto/light_square/sprite.png) -1px -1px no-repeat; cursor: pointer; } /* Close button */
-	div.light_square .pp_details { position: relative;text-align: center; }
-	div.light_square .pp_description { margin-right: 0; }
+	div.light_square .pp_close { width: 22px; height: 22px; background: url(../images/prettyPhoto/light_square/sprite.png) -1px -1px no-repeat; cursor: pointer; } /* Close button */
+	div.light_square .pp_details { text-align: left; }
+	div.light_square .pp_description { margin-right: 0; font-size: 17px; }
 	div.light_square #pp_full_res .pp_inline { color: #000; }
 	div.light_square .pp_gallery a.pp_arrow_previous,
 	div.light_square .pp_gallery a.pp_arrow_next { margin-top: 12px !important; }
@@ -255,7 +255,7 @@
 	div.pp_pic_holder a:focus { outline:none; }
 
 	div.pp_overlay {
-		background: #000;
+		background: #fff;
 		display: none;
 		left: 0;
 		position: absolute;
@@ -320,8 +320,9 @@
 		
 			.pp_content_container .pp_details {
 				float: left;
-				margin: 15px 0 2px 0;
-				color: #fff;
+				margin: 5px 0 2px 0;
+				color: #000;
+				font-weight: 600;
 			}
 				.pp_description {
 					display: none;
@@ -434,11 +435,11 @@
 			display: block;
 			text-indent: -10000px;
 			height: 36px;
-			right: -95px;
-			margin-top: -18px;
+			right: 40px;
+			margin-top: -10px;
 			position: absolute;
 			top: 50%;
-			width: 65px;
+			width: 16px;
 		}
 			
 		a.pp_previous {
@@ -446,12 +447,12 @@
 			display: block;
 			text-indent: -10000px;
 			height: 36px;
-			left: -95px;
-			margin-top: -18px;
+			left: 40px;
+			margin-top: -10px;
 			position: absolute;
 			text-indent: -10000px;
 			top: 50%;
-			width: 65px;
+			width: 16px;
 		}
 		
 		a.pp_expand,
@@ -468,7 +469,7 @@
 		}
 			
 		a.pp_close {
-			position: absolute; right: 0; top: 0; 
+			position: absolute; left: 25px; top: 5px; 
 			display: block;
 			line-height:22px;
 			text-indent: -10000px;
@@ -532,4 +533,15 @@
 			font-size: 17px;
 			margin: 0 0 5px 15px;
 			z-index: 9999;
+		}
+		.pp_close::before {
+			content: "X";
+			cursor: pointer;
+			display: block;
+			left: 15px;
+			position: absolute;
+			text-indent: 0;
+			top: 10px;
+			z-index: 9999;
+			font-size: 20px;
 		}

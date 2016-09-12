@@ -9,12 +9,12 @@ var wheight,smoke;
 				
 				if($(this).parent().find('.answer').hasClass('active')){
 					$(this).parent().find('.answer').removeClass('active').slideUp(500);
-					$(this).find('.plus').removeClass('minus');
+					$(this).find('.down-arrow').removeClass('up-arrow');
 				}else{
 					$('.question-answer h6').parent().find('.answer').removeClass('active').slideUp(500);
-					$('.question-answer h6').find('.plus').removeClass('minus');
+					$('.question-answer h6').find('.down-arrow').removeClass('up-arrow');
 					$(this).parent().find('.answer').addClass('active').slideDown(500);
-					$(this).find('.plus').addClass('minus');
+					$(this).find('.down-arrow').addClass('up-arrow');
 				}
 			});
 		},feeds: function(){
@@ -55,22 +55,30 @@ var wheight,smoke;
 			 template: '<div class="item"><a href="{{link}}" target="_blank"><span><img src="{{image}}" alt="{{caption}}"/></span></a></div>', 
 			});
 			userFeed.run();
-		},
+		},slider: function(sliderContainer,controlOptions,pagerOptions,autoOptions){
+			var sliderContainer,controlOptions,pagerOptions,autoOptions;
+			$(sliderContainer).bxSlider({
+				auto: autoOptions,
+				controls: controlOptions,
+				pager: pagerOptions
+			})
+		} 
 		
 	}
 	$(document).ready(function(){
 		smoke.sizes();
 		smoke.accordion();
-		if($('.gallery').length){
-			$(".gallery a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:400, autoplay_slideshow: false});
+		if($('.gallery-page').length){
+			$(".gallery-ul a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:400, autoplay_slideshow: false});
 		}
 		if($("#instafeed").length){
 			smoke.feeds();
 		}
 		if($(".home-slider").length){
-			$('.home-slider').bxSlider({
-				auto: true
-			})
+			smoke.slider(".home-slider",false,true,true);
+		}
+		if($(".testimonial-slider").length){
+			smoke.slider(".testimonial-slider",true,false,false);
 		}
 	});
 	$(window).on("load resize",function(e){

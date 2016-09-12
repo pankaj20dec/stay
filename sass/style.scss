@@ -52,11 +52,16 @@ h3{
 	letter-spacing: 3px;
 	border-bottom: 1px solid;
 	padding: 0 0 45px;
+	border-bottom: 0;
+	padding: 0;
+}
+.h3{
+	@extend h3;
 }
 .title{
 	@extend h3;
-	border-bottom: 0;
-	padding: 0;
+	border-bottom: 1px solid;
+	padding: 0 0 45px;
 }
 h4{	
 	font-family: $montserrat;
@@ -81,6 +86,14 @@ h6{
 	line-height: 2;
 	letter-spacing: 2px;
 	margin: 0;
+}
+.press-title{
+	font-family: $montserrat;
+	font-weight: $font-semi-bold;
+	text-transform: capitalize;
+	padding-bottom: 20px;
+	border-bottom: 1px solid;
+	margin: 40px 45px 20px;
 }
 .common-space{
 	padding: 80px 0;
@@ -185,7 +198,7 @@ img{
 	margin: 0 auto;
 	padding: 0 100px;
 	position: relative;
-	background: $white;
+	background: $cream;
 }
 .home{
 	.container{
@@ -324,6 +337,7 @@ img{
 	.home-contact{
 		.navbar-form{
 			margin-top: 60px;
+			padding: 0;
 		
 		.form-group {
 			float: left;
@@ -351,7 +365,166 @@ img{
 			}
 		}
 	}
- }	
+ }
+ .testimonials{
+	 padding-top: 85px;
+	 .bx-wrapper{
+		background: #f8f8f8;
+	 }
+	 .container{
+		 background: transparent;
+	 }
+	 .testimonial-slider{
+		 .testimonial-detail{
+			 min-height: 500px;
+			 padding-left: 40px;
+			 padding-right: 10px;
+			 text-align: center;
+			 h4{
+				 margin-bottom: 60px;
+				 text-transform: capitalize;
+			 }
+		 }
+		 .writer-name{
+			bottom: 20px;
+			position: absolute;
+			right: 15px;
+			text-transform: lowercase;
+		 }
+	 }
+ }
+ .home{
+	 .testimonials{
+		 padding-top: 0;
+	 }
+ }
+ 
+ /**************  Gallery   ********************/
+.gallery-page{
+	position: relative;
+	margin-top: 130px;
+	.villas{
+		position: absolute;
+		top: 0;
+		left: -72px;
+		h4{
+			text-transform: capitalize;
+		}
+	}
+	.gallery-ul{
+		li{
+			width: 33.333%;
+			float: left;
+			padding: 8px;
+			img{
+				width: 100%;
+			}
+		}
+	}	
+}
+ /*********  Common Pages ************/
+	 .page-title {
+		background: #fff none repeat scroll 0 0;
+		padding: 40px 130px;
+		text-align: center;
+		&.with-banner{
+			margin-top: -215px;
+		}
+		.short-description{
+			padding: 0 25px;
+		}
+	}
+	.page-banner{
+		background-size: cover !important;
+		min-height: 520px;
+	}
+	.page-content{
+		h6{
+			line-height: 4;
+		}
+		.description {
+			h3{
+				line-height: 60px;
+			}
+		}
+		.question-answer{
+		border-top: 1px solid;
+		h6{
+			margin-bottom: 0;
+			line-height: 5;
+			cursor: pointer;
+			.down-arrow{
+				float: right;
+				&:before{
+					content: "\f107";
+					font-family: "fontawesome";
+				}
+				&.up-arrow{
+					&:before{
+						content: "\f106";
+						font-family: "fontawesome";
+					}
+				}
+			}
+		}
+		.answer{
+			padding: 0 0 20px;
+			display: none;
+		}
+		&:last-child{
+			border-bottom: 1px solid $black;
+		}
+	 }	
+		
+	}
+	.contact-us{
+		padding-top: 80px;
+		h4{
+			text-transform: capitalize;
+		}
+		.contact-form{
+			padding-left: 30px;
+			.navbar-form {
+				padding-right: 0;
+			}
+			.form-group{
+				.form-control{
+					width: 48.5% !important;
+					margin-right: 0;
+					margin-bottom: 15px;
+					height: 45px;
+					font-weight: $font-semi-bold;
+					padding: 15px 20px;
+					text-transform: capitalize;
+					&:first-child{
+						margin-right: 2%;
+					}
+					&:nth-child(3){
+						margin-right: 2%;
+					}
+				}
+			}
+			.message{
+				margin-bottom: 10px;
+				textarea{
+					width: 99.7% !important;
+					font-weight: $font-semi-bold;
+					padding: 15px 20px;
+					text-transform: capitalize;
+				}
+			}	
+		}
+	}
+	
+	/*************  Press  ***************/
+	.press-box{
+		padding-bottom: 80px;
+		text-align: center;
+		.link-button{
+			margin: 0;
+		}
+	}
+ 
 }
 /*************** Footer *************/
 #footer{

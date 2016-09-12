@@ -42,7 +42,7 @@ h1, h2, .section-title {
   line-height: 65px;
 }
 
-h3, .title {
+h3, .h3, .title {
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
   font-weight: normal;
@@ -50,11 +50,13 @@ h3, .title {
   letter-spacing: 3px;
   border-bottom: 1px solid;
   padding: 0 0 45px;
+  border-bottom: 0;
+  padding: 0;
 }
 
 .title {
-  border-bottom: 0;
-  padding: 0;
+  border-bottom: 1px solid;
+  padding: 0 0 45px;
 }
 
 h4 {
@@ -82,6 +84,15 @@ h6 {
   line-height: 2;
   letter-spacing: 2px;
   margin: 0;
+}
+
+.press-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding-bottom: 20px;
+  border-bottom: 1px solid;
+  margin: 40px 45px 20px;
 }
 
 .common-space {
@@ -190,7 +201,7 @@ img {
   margin: 0 auto;
   padding: 0 100px;
   position: relative;
-  background: #ffffff;
+  background: #f8f8f8;
 }
 
 .home .container, .home .second-container {
@@ -278,6 +289,11 @@ header .logo {
   line-height: 1;
 }
 
+.main-container {
+  /**************  Gallery   ********************/
+  /*********  Common Pages ************/
+  /*************  Press  ***************/
+}
 .main-container .content {
   -webkit-column-count: 2;
   -moz-column-count: 2;
@@ -321,11 +337,12 @@ header .logo {
   min-height: 525px;
   background: transparent;
 }
-.main-container .latest-blog .content-box h3, .main-container .latest-blog .content-box .title {
+.main-container .latest-blog .content-box h3, .main-container .latest-blog .content-box .h3, .main-container .latest-blog .content-box .title {
   margin-top: 35px;
 }
 .main-container .home-contact .navbar-form {
   margin-top: 60px;
+  padding: 0;
 }
 .main-container .home-contact .navbar-form .form-group {
   float: left;
@@ -351,6 +368,144 @@ header .logo {
   padding: 12px 20px;
   font-weight: 600;
   color: #000000;
+}
+.main-container .testimonials {
+  padding-top: 85px;
+}
+.main-container .testimonials .bx-wrapper {
+  background: #f8f8f8;
+}
+.main-container .testimonials .container, .main-container .testimonials .second-container {
+  background: transparent;
+}
+.main-container .testimonials .testimonial-slider .testimonial-detail {
+  min-height: 500px;
+  padding-left: 40px;
+  padding-right: 10px;
+  text-align: center;
+}
+.main-container .testimonials .testimonial-slider .testimonial-detail h4 {
+  margin-bottom: 60px;
+  text-transform: capitalize;
+}
+.main-container .testimonials .testimonial-slider .writer-name {
+  bottom: 20px;
+  position: absolute;
+  right: 15px;
+  text-transform: lowercase;
+}
+.main-container .home .testimonials {
+  padding-top: 0;
+}
+.main-container .gallery-page {
+  position: relative;
+  margin-top: 130px;
+}
+.main-container .gallery-page .villas {
+  position: absolute;
+  top: 0;
+  left: -72px;
+}
+.main-container .gallery-page .villas h4 {
+  text-transform: capitalize;
+}
+.main-container .gallery-page .gallery-ul li {
+  width: 33.333%;
+  float: left;
+  padding: 8px;
+}
+.main-container .gallery-page .gallery-ul li img {
+  width: 100%;
+}
+.main-container .page-title {
+  background: #fff none repeat scroll 0 0;
+  padding: 40px 130px;
+  text-align: center;
+}
+.main-container .page-title.with-banner {
+  margin-top: -215px;
+}
+.main-container .page-title .short-description {
+  padding: 0 25px;
+}
+.main-container .page-banner {
+  background-size: cover !important;
+  min-height: 520px;
+}
+.main-container .page-content h6 {
+  line-height: 4;
+}
+.main-container .page-content .description h3, .main-container .page-content .description .h3, .main-container .page-content .description .title {
+  line-height: 60px;
+}
+.main-container .page-content .question-answer {
+  border-top: 1px solid;
+}
+.main-container .page-content .question-answer h6 {
+  margin-bottom: 0;
+  line-height: 5;
+  cursor: pointer;
+}
+.main-container .page-content .question-answer h6 .down-arrow {
+  float: right;
+}
+.main-container .page-content .question-answer h6 .down-arrow:before {
+  content: "\f107";
+  font-family: "fontawesome";
+}
+.main-container .page-content .question-answer h6 .down-arrow.up-arrow:before {
+  content: "\f106";
+  font-family: "fontawesome";
+}
+.main-container .page-content .question-answer .answer {
+  padding: 0 0 20px;
+  display: none;
+}
+.main-container .page-content .question-answer:last-child {
+  border-bottom: 1px solid #000000;
+}
+.main-container .contact-us {
+  padding-top: 80px;
+}
+.main-container .contact-us h4 {
+  text-transform: capitalize;
+}
+.main-container .contact-us .contact-form {
+  padding-left: 30px;
+}
+.main-container .contact-us .contact-form .navbar-form {
+  padding-right: 0;
+}
+.main-container .contact-us .contact-form .form-group .form-control {
+  width: 48.5% !important;
+  margin-right: 0;
+  margin-bottom: 15px;
+  height: 45px;
+  font-weight: 600;
+  padding: 15px 20px;
+  text-transform: capitalize;
+}
+.main-container .contact-us .contact-form .form-group .form-control:first-child {
+  margin-right: 2%;
+}
+.main-container .contact-us .contact-form .form-group .form-control:nth-child(3) {
+  margin-right: 2%;
+}
+.main-container .contact-us .contact-form .message {
+  margin-bottom: 10px;
+}
+.main-container .contact-us .contact-form .message textarea {
+  width: 99.7% !important;
+  font-weight: 600;
+  padding: 15px 20px;
+  text-transform: capitalize;
+}
+.main-container .press-box {
+  padding-bottom: 80px;
+  text-align: center;
+}
+.main-container .press-box .link-button {
+  margin: 0;
 }
 
 /*************** Footer *************/
