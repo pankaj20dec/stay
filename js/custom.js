@@ -27,7 +27,8 @@ var wheight,smoke;
 			 after: function () {
 			  var owl = $("#instafeed");
 			  owl.owlCarousel({ 
-			  loop:true,
+			  loop: true,
+			  dots: false,
 			  responsive:{
 					0:{
 						items:1
@@ -62,6 +63,33 @@ var wheight,smoke;
 				controls: controlOptions,
 				pager: pagerOptions
 			})
+		},carousel: function(sliderContainer){
+			var sliderContainer;
+			 $(sliderContainer).owlCarousel({
+				loop:true,
+				center:true,
+				margin:20,
+				URLhashListener:true,
+				autoplayHoverPause:true,
+				startPosition: 'URLHash',
+				dots: true,
+				autoplay: true,
+				responsive:{
+					0:{
+						items:1
+					},
+					480:{
+						items:2
+					},
+					768:{
+						items:2
+					},
+					1000:{
+						items: 2
+					}
+				}
+			});
+			
 		} 
 		
 	}
@@ -80,6 +108,10 @@ var wheight,smoke;
 		if($(".testimonial-slider").length){
 			smoke.slider(".testimonial-slider",true,false,false);
 		}
+		if( $('.carousel-slider .box-image').length > 1){
+			smoke.carousel('.carousel-slider');
+		}
+		  
 	});
 	$(window).on("load resize",function(e){
 		smoke.sizes();

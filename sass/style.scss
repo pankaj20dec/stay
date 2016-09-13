@@ -154,7 +154,20 @@ img{
 			top: 0;
 		}
 	}
-
+.view-more{
+	@extend .link-button;
+	padding-right: 0;
+	margin: 0 0 30px;
+	&:after{
+		content: "\f107 ";
+		top: auto;
+		bottom: -35px;
+		left: 0;
+	}	
+}
+.view-more-container{
+	clear: both;
+}
 .form-control{
 	font-family: $body-font;
 	font-style: $font-normal;
@@ -206,6 +219,7 @@ img{
 	background: transparent;
 	}
 }
+
 .second-container{
 	@extend .container;
 	max-width: 1230px;
@@ -227,6 +241,10 @@ img{
 }
 .no-pad{
 	padding: 0;
+}
+.col-half{
+	width: 50%;
+	float: left;
 }
 /************  Header  **********/
 	.navbar-default {
@@ -304,7 +322,7 @@ img{
 		}
 		@at-root .content-box{
 			background: $white;
-			min-height: 605px;
+			min-height: 604px;
 			text-align: center;
 			padding: 0 85px;
 			.details{
@@ -494,7 +512,7 @@ img{
 					margin-bottom: 15px;
 					height: 45px;
 					font-weight: $font-semi-bold;
-					padding: 15px 20px;
+					padding: 6px 20px;
 					text-transform: capitalize;
 					&:first-child{
 						margin-right: 2%;
@@ -514,8 +532,56 @@ img{
 				}
 			}	
 		}
+		
 	}
-	
+	.booking{
+		@extend .contact-us;
+		.select:nth-of-type(2) {
+			float: right;
+		}
+		.form-group{
+			.select{
+				position: relative;
+				width: 48.5% !important;
+				text-transform: capitalize;
+				background: $white;
+				float: left;
+				margin-bottom: 15px;
+				 &:nth-of-type(1){
+						margin-right: 2.7%;
+					}
+				select{
+				  border: 0 !important;
+				  outline: 0;
+				 -webkit-appearance: none;
+					-ms-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+					background-color: transparent;
+					cursor: pointer;
+					position: relative;
+					z-index: 10;
+					&.form-control{
+						width: 100% !important;
+						margin: 0;
+					}
+					option{
+						border: 0 !important;
+						outline: 0;
+					}
+				 }
+				
+				 &:after {
+					content: "\f078";
+					font-family: 'FontAwesome';
+					position: absolute;
+					top: 8px;
+					right: 10px;
+					z-index: 5;
+				}
+			  }
+			}
+	}
 	/*************  Press  ***************/
 	.press-box{
 		padding-bottom: 80px;
@@ -525,6 +591,64 @@ img{
 		}
 	}
  
+}
+
+/**************  Blog listing *****************/
+.blog-page{
+	background: $cream;
+	margin-bottom: 85px;
+	@at-root .date-author{
+		margin-bottom: 30px;
+		h5{
+			text-transform: lowercase;
+			font-weight: $font-semi-bold;
+		}
+	}
+	&.second-space{
+		padding-bottom: 0;
+	}
+	@at-root .home-contact{
+		.container{
+			background: transparent;
+		}
+	}
+}
+
+/********** Blog detail page *************/
+
+.blog-content{
+	@extend .page-content;
+}
+.blog-featured{
+	@extend .page-banner;
+}
+.tags{
+	padding-top: 30px;
+	ul{
+		li{
+			display: inline;
+		}
+	}
+}
+
+.content-container{
+	padding: 110px 0 65px;
+	h3{
+		margin-top: 10px;
+	}
+	.description{
+		padding-bottom: 65px;
+	}
+	.features{
+		@extend .description;
+		h6{
+			border-bottom: 2px solid;
+			line-height: 5;
+		}
+	}
+	.villa-sitemap-img{
+		@extend .description;
+	}
 }
 /*************** Footer *************/
 #footer{

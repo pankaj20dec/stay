@@ -214,3 +214,22 @@
   position: relative;
   z-index: 1;
 }
+.owl-controls {
+    position: relative;
+}
+.owl-dots {
+    margin-top: 25px;
+    position: absolute;
+    right: 130px;
+}
+.owl-dot {
+    border: 2px solid #231f20;
+    border-radius: 100%;
+    display: inline-block;
+    height: 10px;
+    margin: 0 5px;
+    width: 10px;
+}
+.owl-dot.active{
+	background: #231f20;
+}

@@ -107,7 +107,7 @@ img {
   max-width: 100%;
 }
 
-.btn-default, .link-button {
+.btn-default, .link-button, .view-more {
   background-color: transparent;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -119,12 +119,12 @@ img {
   padding: 8px 0;
   font-size: 16px;
 }
-.btn-default:hover, .link-button:hover {
+.btn-default:hover, .link-button:hover, .view-more:hover {
   background-color: transparent;
   border: none;
   color: #000000;
 }
-.btn-default:focus, .link-button:focus {
+.btn-default:focus, .link-button:focus, .view-more:focus {
   background-color: transparent;
 }
 
@@ -133,12 +133,12 @@ img {
   background-color: transparent;
 }
 
-.btn-default:active:hover, .link-button:active:hover, .btn-default:active:focus, .link-button:active:focus, .btn-default.focus:active, .focus.link-button:active {
+.btn-default:active:hover, .link-button:active:hover, .view-more:active:hover, .btn-default:active:focus, .link-button:active:focus, .view-more:active:focus, .btn-default.focus:active, .focus.link-button:active, .focus.view-more:active {
   background-color: transparent;
   color: #000000;
 }
 
-.link-button {
+.link-button, .view-more {
   margin: 30px 0;
   text-decoration: none;
   text-align: center;
@@ -148,7 +148,7 @@ img {
   text-decoration: none;
   padding-right: 30px;
 }
-.link-button:after {
+.link-button:after, .view-more:after {
   content: "\f105";
   font-family: fontawesome;
   font-size: 23px;
@@ -156,6 +156,21 @@ img {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.view-more {
+  padding-right: 0;
+  margin: 0 0 30px;
+}
+.view-more:after {
+  content: "\f107 ";
+  top: auto;
+  bottom: -35px;
+  left: 0;
+}
+
+.view-more-container {
+  clear: both;
 }
 
 .form-control {
@@ -214,7 +229,7 @@ img {
   padding: 0 15px;
 }
 
-.page-content {
+.page-content, .blog-content {
   padding-top: 60px;
 }
 
@@ -233,6 +248,11 @@ img {
 
 .no-pad {
   padding: 0;
+}
+
+.col-half {
+  width: 50%;
+  float: left;
 }
 
 /************  Header  **********/
@@ -311,7 +331,7 @@ header .logo {
 }
 .content-box {
   background: #ffffff;
-  min-height: 605px;
+  min-height: 604px;
   text-align: center;
   padding: 0 85px;
 }
@@ -428,84 +448,167 @@ header .logo {
 .main-container .page-title .short-description {
   padding: 0 25px;
 }
-.main-container .page-banner {
+.main-container .page-banner, .main-container .blog-featured {
   background-size: cover !important;
   min-height: 520px;
 }
-.main-container .page-content h6 {
+.main-container .page-content h6, .main-container .blog-content h6 {
   line-height: 4;
 }
-.main-container .page-content .description h3, .main-container .page-content .description .h3, .main-container .page-content .description .title {
+.main-container .page-content .description h3, .main-container .blog-content .description h3, .main-container .page-content .content-container .features h3, .content-container .main-container .page-content .features h3, .main-container .blog-content .content-container .features h3, .content-container .main-container .blog-content .features h3, .main-container .page-content .content-container .villa-sitemap-img h3, .content-container .main-container .page-content .villa-sitemap-img h3, .main-container .blog-content .content-container .villa-sitemap-img h3, .content-container .main-container .blog-content .villa-sitemap-img h3, .main-container .page-content .description .h3, .main-container .blog-content .description .h3, .main-container .page-content .content-container .features .h3, .content-container .main-container .page-content .features .h3, .main-container .blog-content .content-container .features .h3, .content-container .main-container .blog-content .features .h3, .main-container .page-content .content-container .villa-sitemap-img .h3, .content-container .main-container .page-content .villa-sitemap-img .h3, .main-container .blog-content .content-container .villa-sitemap-img .h3, .content-container .main-container .blog-content .villa-sitemap-img .h3, .main-container .page-content .description .title, .main-container .blog-content .description .title, .main-container .page-content .content-container .features .title, .content-container .main-container .page-content .features .title, .main-container .blog-content .content-container .features .title, .content-container .main-container .blog-content .features .title, .main-container .page-content .content-container .villa-sitemap-img .title, .content-container .main-container .page-content .villa-sitemap-img .title, .main-container .blog-content .content-container .villa-sitemap-img .title, .content-container .main-container .blog-content .villa-sitemap-img .title {
   line-height: 60px;
 }
-.main-container .page-content .question-answer {
+.main-container .page-content .question-answer, .main-container .blog-content .question-answer {
   border-top: 1px solid;
 }
-.main-container .page-content .question-answer h6 {
+.main-container .page-content .question-answer h6, .main-container .blog-content .question-answer h6 {
   margin-bottom: 0;
   line-height: 5;
   cursor: pointer;
 }
-.main-container .page-content .question-answer h6 .down-arrow {
+.main-container .page-content .question-answer h6 .down-arrow, .main-container .blog-content .question-answer h6 .down-arrow {
   float: right;
 }
-.main-container .page-content .question-answer h6 .down-arrow:before {
+.main-container .page-content .question-answer h6 .down-arrow:before, .main-container .blog-content .question-answer h6 .down-arrow:before {
   content: "\f107";
   font-family: "fontawesome";
 }
-.main-container .page-content .question-answer h6 .down-arrow.up-arrow:before {
+.main-container .page-content .question-answer h6 .down-arrow.up-arrow:before, .main-container .blog-content .question-answer h6 .down-arrow.up-arrow:before {
   content: "\f106";
   font-family: "fontawesome";
 }
-.main-container .page-content .question-answer .answer {
+.main-container .page-content .question-answer .answer, .main-container .blog-content .question-answer .answer {
   padding: 0 0 20px;
   display: none;
 }
-.main-container .page-content .question-answer:last-child {
+.main-container .page-content .question-answer:last-child, .main-container .blog-content .question-answer:last-child {
   border-bottom: 1px solid #000000;
 }
-.main-container .contact-us {
+.main-container .contact-us, .main-container .booking {
   padding-top: 80px;
 }
-.main-container .contact-us h4 {
+.main-container .contact-us h4, .main-container .booking h4 {
   text-transform: capitalize;
 }
-.main-container .contact-us .contact-form {
+.main-container .contact-us .contact-form, .main-container .booking .contact-form {
   padding-left: 30px;
 }
-.main-container .contact-us .contact-form .navbar-form {
+.main-container .contact-us .contact-form .navbar-form, .main-container .booking .contact-form .navbar-form {
   padding-right: 0;
 }
-.main-container .contact-us .contact-form .form-group .form-control {
+.main-container .contact-us .contact-form .form-group .form-control, .main-container .booking .contact-form .form-group .form-control {
   width: 48.5% !important;
   margin-right: 0;
   margin-bottom: 15px;
   height: 45px;
   font-weight: 600;
-  padding: 15px 20px;
+  padding: 6px 20px;
   text-transform: capitalize;
 }
-.main-container .contact-us .contact-form .form-group .form-control:first-child {
+.main-container .contact-us .contact-form .form-group .form-control:first-child, .main-container .booking .contact-form .form-group .form-control:first-child {
   margin-right: 2%;
 }
-.main-container .contact-us .contact-form .form-group .form-control:nth-child(3) {
+.main-container .contact-us .contact-form .form-group .form-control:nth-child(3), .main-container .booking .contact-form .form-group .form-control:nth-child(3) {
   margin-right: 2%;
 }
-.main-container .contact-us .contact-form .message {
+.main-container .contact-us .contact-form .message, .main-container .booking .contact-form .message {
   margin-bottom: 10px;
 }
-.main-container .contact-us .contact-form .message textarea {
+.main-container .contact-us .contact-form .message textarea, .main-container .booking .contact-form .message textarea {
   width: 99.7% !important;
   font-weight: 600;
   padding: 15px 20px;
   text-transform: capitalize;
 }
+.main-container .booking .select:nth-of-type(2) {
+  float: right;
+}
+.main-container .booking .form-group .select {
+  position: relative;
+  width: 48.5% !important;
+  text-transform: capitalize;
+  background: #ffffff;
+  float: left;
+  margin-bottom: 15px;
+}
+.main-container .booking .form-group .select:nth-of-type(1) {
+  margin-right: 2.7%;
+}
+.main-container .booking .form-group .select select {
+  border: 0 !important;
+  outline: 0;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+.main-container .booking .form-group .select select.form-control {
+  width: 100% !important;
+  margin: 0;
+}
+.main-container .booking .form-group .select select option {
+  border: 0 !important;
+  outline: 0;
+}
+.main-container .booking .form-group .select:after {
+  content: "\f078";
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 5;
+}
 .main-container .press-box {
   padding-bottom: 80px;
   text-align: center;
 }
-.main-container .press-box .link-button {
+.main-container .press-box .link-button, .main-container .press-box .view-more {
   margin: 0;
+}
+
+/**************  Blog listing *****************/
+.blog-page {
+  background: #f8f8f8;
+  margin-bottom: 85px;
+}
+.date-author {
+  margin-bottom: 30px;
+}
+.date-author h5 {
+  text-transform: lowercase;
+  font-weight: 600;
+}
+.blog-page.second-space {
+  padding-bottom: 0;
+}
+.home-contact .container, .home-contact .second-container {
+  background: transparent;
+}
+
+/********** Blog detail page *************/
+.tags {
+  padding-top: 30px;
+}
+.tags ul li {
+  display: inline;
+}
+
+.content-container {
+  padding: 110px 0 65px;
+}
+.content-container h3, .content-container .h3, .content-container .title {
+  margin-top: 10px;
+}
+.content-container .description, .content-container .features, .content-container .villa-sitemap-img {
+  padding-bottom: 65px;
+}
+.content-container .features h6 {
+  border-bottom: 2px solid;
+  line-height: 5;
 }
 
 /*************** Footer *************/
